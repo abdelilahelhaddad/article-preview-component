@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap");
+@import 'tippy.js/dist/tippy.css';
+
+:root {
+  --p-Dark-Blue: hsl(217, 19%, 35%);
+  --s-Dark-Blue: hsl(214, 17%, 51%);
+  --Grayish-Blue: hsl(212, 23%, 69%);
+  --Light-Grayish-Blue: hsl(210, 46%, 95%);
+  --max-width: 1440px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  background-color: var(--Light-Grayish-Blue);
+}
+
+section {
+  position: relative;
+}
+
+.container {
+  display: flex;
+  position: absolute;
+  margin: 14% auto;
+  left: 25%;
+  width: 700px;
+  height: 250px;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.image-content img {
+  width: 100%;
+  height: 250px;
+}
+
+.text-content {
+  padding: 25px 35px;
+}
+
+.text-content h1 {
+  color: var(--p-Dark-Blue);
+  margin-bottom: 10px;
+}
+
+.text-content p {
+  color: var(--s-Dark-Blue);
+  padding-bottom: 20px;
+}
+
+.user {
+  display: flex;
+}
+
+.user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.name-date h3 {
+  color: var(--p-Dark-Blue);
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+.name-date h5 {
+  color: var(--Grayish-Blue);
+  font-size: 12px;
+}
+
+.share {
+  margin-left: 175px;
+  border-radius: 50%;
+}
+
+.share .fa {
+  color: var(--p-Dark-Blue);
+  background: var(--Light-Grayish-Blue);
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.share .fa:hover {
+  color: white;
+  background: var(--s-Dark-Blue);
+  padding: 8px;
+  border-radius: 50%;
+}
+
+i {
+  color: white;
+}
+
+.tippy-box[data-theme~='DarkBlue'] {
+  background-color: var(--p-Dark-Blue);
+  color: var(--Grayish-Blue);
+}
+
+.tippy-box[data-theme~='DarkBlue'][data-placement^='top']>.tippy-arrow::before {
+  border-top-color: var(--p-Dark-Blue);
+}
+
+@media (max-width: 375px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    /* margin: 25% auto; */
+    left: 10%;
+    width: 300px;
+    height: 450px;
+    background-color: white;
+    /* overflow: hidden; */
+    border-radius: 10px;
+    /* align-items: center; */
+  }
+
+  .image-content {
+    position: absolute;
+    width: 300;
+    height: 200px;
+    top: 0;
+    display: block;
+  }
+
+  .image-content img {
+    width: 100%;
+    height: 180px;
+    display: block;
+  }
+
+  .text-content {
+    margin-top: 12rem;
+    padding: 0px 40px;
+  }
+
+  .text-content h1 {
+    color: var(--p-Dark-Blue);
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  .text-content p {
+    color: var(--s-Dark-Blue);
+    padding-bottom: 25px;
+    font-size: 12px;
+  }
+
+  .name-date h3 {
+    font-size: 10px;
+  }
+
+  .name-date h5 {
+    color: var(--Grayish-Blue);
+    font-size: 10px;
+  }
+
+  .share {
+    margin-left: 40px;
+  }
+}
